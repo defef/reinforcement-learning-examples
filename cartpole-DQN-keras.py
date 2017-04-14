@@ -91,7 +91,7 @@ def run_train_episode(env, Q_model, exploration_rate):
     total_reward = len(current_actions)
     #using immediate reward of 1 in the Q-value update does not seem to work.
     #setting the reward from the very last action in the episode to zero improves
-    #things, but convergence is quote slow.  
+    #things, but convergence is quite slow.  
     #setting the immediate reward equal to the total cumulative reward works best. 
     current_total_rewards = range(len(current_actions),0,-1) 
     next_max_Q_vals = np.array(next_max_Q_vals)    
